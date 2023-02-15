@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18F34672-1713-4308-A6DF-AF8C4644B8A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAE.EntityLayer</RootNamespace>
+    <AssemblyName>SAE.EntityLayer</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SGC.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\EStickerApostilladorCollection.cs" />
+    <Compile Include="Collections\EDetallePerfilUsuarioCollection.cs" />
+    <Compile Include="Collections\EDocumentoCollection.cs" />
+    <Compile Include="Collections\EModuloCollection.cs" />
+    <Compile Include="Collections\EOficinaCollection.cs" />
+    <Compile Include="Collections\EOpcionCollection.cs" />
+    <Compile Include="Collections\EPaisCollection.cs" />
+    <Compile Include="Collections\EParametroCollection.cs" />
+    <Compile Include="Collections\EPerfilCollection.cs" />
+    <Compile Include="Collections\EPerfilUsuarioCollection.cs" />
+    <Compile Include="Collections\EPersonaCollection.cs" />
+    <Compile Include="Collections\EUnidadCollection.cs" />
+    <Compile Include="Collections\EUsuarioCollection.cs" />
+    <Compile Include="Collections\EUsuarioOficinaCollection.cs" />
+    <Compile Include="EStickerApostillador.cs" />
+    <Compile Include="EDocumento.cs" />
+    <Compile Include="EFirmante.cs" />
+    <Compile Include="EApostillador.cs" />
+    <Compile Include="EActuacion.cs" />
+    <Compile Include="EAuditoria.cs" />
+    <Compile Include="EModulo.cs" />
+    <Compile Include="EOficina.cs" />
+    <Compile Include="EOpcion.cs" />
+    <Compile Include="EPais.cs" />
+    <Compile Include="EParametro.cs" />
+    <Compile Include="EPerfil.cs" />
+    <Compile Include="EPerfilUsuario.cs" />
+    <Compile Include="EPerfilUsuarioDetalle.cs" />
+    <Compile Include="EPersona.cs" />
+    <Compile Include="EUnidad.cs" />
+    <Compile Include="EUsuario.cs" />
+    <Compile Include="EUsuarioOficina.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SGC.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SAE.Nullables\SAE.Nullables.csproj">
+      <Project>{8785958B-14A7-4495-9585-612E77B0A7C5}</Project>
+      <Name>SAE.Nullables</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,323 @@
+<%@ master language="C#" autoeventwireup="true" inherits="MP_Main, App_Web_gkcva9cx" %>
+<%@ Register src="../UserControl/CuwMenu.ascx" tagname="CuwMenu" tagprefix="uc1" %>
+
+
+<%@ Register src="../UserControl/CuwNavegacion.ascx" tagname="CuwNavegacion" tagprefix="uc2" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>SAE</title>
+    <link href ="../App_Themes/Default.css" rel="Stylesheet" type="text/css" />
+    <script src="../Scripts/common.js" type="text/javascript"></script>
+    
+   
+</head>
+
+<body >
+
+    <form id="form1" runat="server" >
+  <%-- <div  id="apDivProgreso" >
+                    <ajax:UpdateProgress ID="UpdateProgress1" runat="server"  >
+                       <ProgressTemplate   >
+                            
+                            <table border="0" cellpadding="0" cellspacing="0">
+                            <tr><td>
+                            <asp:Label runat="server" ID="lblUpdateProgresTitulo" Text="Cargando....."  />
+                            </td></tr>
+                            </table>
+                    </ProgressTemplate>
+                    </ajax:UpdateProgress> 
+    </div>  --%>
+    <div  style="position:absolute;" id="apDivProgresoGeneral" >
+    <ajax:UpdateProgress ID="uproFiltros" runat="server" >
+    <ProgressTemplate > 
+                     <img alt='' src="../../Images/Iconos/barr-cicle-ajax-loader.gif" />
+    </ProgressTemplate>
+    </ajax:UpdateProgress>
+    </div>   
+    
+    <ajax:ScriptManager ID="ScriptManager1" runat="server"  EnablePartialRendering="true" EnableScriptGlobalization="true"   />
+    
+    <center><table width="100%"   border="0" cellspacing="0" cellpadding="0">
+           <tr><td align="center">
+           
+           
+    <div  class="box" id="boxContainer" style="width:90%;">
+       <div class="box" id="boxContent" style="width:100%;">
+          <table cellpadding="0" id="tabla-principal"  cellspacing="0" style="width: 100%; height:100%;"    border="0"     >
+          
+        
+          
+          
+    <tr>
+        <td colspan="3"   >
+          
+          <table width="100%" border="0"  cellspacing="0" cellpadding="0" id="header-master">
+          <tr>
+                      <td align="left" valign="middle" >
+                          <img alt="" src="" id="imgLogo" runat="server" height="70" />
+                               
+                      </td>
+                      <td valign="top" align="right" >
+                                  
+                                  <table   border="0" cellpadding="0"  cellspacing="0" >
+                                  <tr>
+                                  <td  valign="middle">
+                                              <table>
+                                              <tr><td>
+                                              <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/Iconos/mision.png"   />
+                                              </td>
+                                              <td>
+                                                 <b>Oficina:  </b> <asp:Label ID="lblOficina" runat="server" CssClass="etiqueta_main"></asp:Label>  |
+                                              </td></tr>
+                                              </table> 
+                                         
+                                  </td>
+                                  <td  valign="middle">
+                                              <table>
+                                              <tr><td>
+                                              <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Iconos/icon-16-config.png"   />
+                                              </td>
+                                              <td>
+                                                 <b>Perfil:  </b> <asp:Label ID="lblPerfil" runat="server" CssClass="etiqueta_main"></asp:Label>  |
+                                              </td></tr>
+                                              </table> 
+                                                
+                                  </td>                 
+                                  <td  valign="middle">
+                                              <table>
+                                              <tr><td>
+                                              <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Iconos/icon-user.gif" Width="16" Height="16" />
+                                              </td>
+                                              <td>
+                                                 <b>Usuario:  </b> <asp:Label ID="lblUsuario" runat="server"  CssClass="etiqueta_main" ></asp:Label>
+                                              </td></tr>
+                                              </table> 
+                                      
+                                  </td>
+                                  </tr>
+                                  
+                                  
+                                  </table>   
+                      </td>
+          
+          
+          </tr>
+          </table>
+          
+          
+        </td>        
+           
+        
+         
+    </tr>
+    
+    <!--begin : barra de navegacion-->
+     <tr id="bar-nav" >
+     
+     <td colspan="3">
+     
+     <table width="100%" cellpadding="0" cellspacing="0" border="0">
+     <tr>
+    
+     
+          <td align="left"  class="td-top-main td-bottom-main" >
+                  
+                            
+                      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                      <td align="left"   > &nbsp;&nbsp;&nbsp;
+                       <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/Iconos/18_css.gif" Width="16" Height="16" />
+                       <asp:Label id="lblTituloPagina" Text="Modulos : &nbsp;&nbsp;&nbsp;" runat="server" Font-Size="Medium" ></asp:Label>
+                          <asp:PlaceHolder ID="phModulo" runat="server">
+                          </asp:PlaceHolder>
+                      
+                     </td>
+                     </tr>
+                     </table>
+                  
+                    
+          </td>
+          <td class="td-top-main td-bottom-main td-right-main"  align="right"> 
+          
+           <table >
+                <tr><td >
+                   &nbsp;&nbsp;&nbsp; Inicio
+                    <asp:ImageButton ID="imgBtnInicio" ToolTip="Ir pagina inicial."  ImageUrl="../Images/Iconos/icon-16-frontpage.png"  runat="server" />
+                   &nbsp;&nbsp;&nbsp; 
+                   </td>
+                   <td valign="middle">
+                   &nbsp;&nbsp;&nbsp; Cerrar sesión
+                       <asp:ImageButton ID="imgBtnLogout" ToolTip="Finalizar la sesión actual."  ImageUrl="../Images/Iconos/icon-16-archive.png"  runat="server" onclick="imgBtnLogout_Click" />
+                    &nbsp;&nbsp;&nbsp;
+                   </td>
+                   <td></td>
+                    </tr>
+                    </table>
+         </td>
+            </tr>
+         </table> 
+     </td>
+     </tr>
+     <!--end -->
+     
+        <!--begin cuerpo-->
+             
+    <tr >      
+    <td  class="body-left" style="width:14%;  height:200px; padding-left:10px; padding-top:10px;" valign="top" align="left" >
+        <table>
+        <tr>
+        <td>
+            <img  runat="server" id="imgModulo" visible="false" /> <asp:Label runat="server" ID="lblModulo"  CssClass="Modulo_Actual" ></asp:Label>
+        </td>
+        </tr>
+        <tr>
+        <td>
+                <uc1:CuwMenu ID="CuwMenuPrincipal" runat="server" />                                 
+        </td>
+        </tr>
+        </table>   
+        
+  
+                                   
+         
+        </td>
+
+        <td  class="td-top-main td-bottom-main" ></td>    
+        <td valign="top"      align="left" style=" width: 100% ;">
+        
+        <table style="width:100%;">
+        <tr><td  class="espacio_titulo_barra">
+        
+        </td></tr>
+        <tr><td>
+                <asp:contentplaceholder id="cphCuerpo" runat="server" ></asp:contentplaceholder>
+        </td></tr>
+        </table>
+       
+        </td>
+         
+        
+    </tr>
+    <!--end cuerpo-->
+    <tr><td colspan="3" style=" height:30px;" class="td-top-main" id="footer" align="center" >MRE&nbsp;&copy; 2010 </td></tr>
+</table>
+        
+    </div>
+    
+    </div>
+               </td></tr>
+    
+    </table>
+</center>
+    </form>
+</body>
+</html>
+
+
+ <script type="text/javascript">
+ 
+//  var ancho=screen.availWidth;
+//  var alto=screen.availHeight;
+//  var prof=screen.colorDepth;
+//  var nuevoancho= ancho/2;
+//  var nuevoalto=alto/2;
+
+//    x=parseInt(nuevoalto);
+//    y=parseInt(nuevoancho);
+
+//    document.getElementById("apDivProgreso").style.top=x+"px";
+//    document.getElementById("apDivProgreso").style.left=y+"px";
+//   function Mensaje(mensaje){
+
+//        alert (mensaje);
+//        return false;
+// 
+//}
+function Mensaje(mensaje){
+
+        alert (mensaje);
+        return false;
+ 
+}
+
+function FC_EfectoBoton(ruta,imagen,objeto){
+//  debugger;
+	objeto = eval(objeto);
+	objeto.src = (ruta + imagen);
+}
+
+function irApostSinFirma()
+{
+ if(document.getElementById("ctl00_cphCuerpo_hidNumeroActuacionApostilla")!=null){
+          
+            numeroApostilla=document.getElementById("ctl00_cphCuerpo_hidNumeroActuacionApostilla").value;
+            height='450';
+            width='390';
+            url="FrmVistaApostilla.aspx?idTicketAct="+numeroApostilla+"&signature=0";
+	        xpos=(window.screen.width/2)-(width/2);
+	        ypos=(window.screen.height/2)-(height/2);
+	        name=''
+        	 
+		 window.open(url, name, 'height=' + height + ',width=' + width + ',toolbar=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,modal=yes,top='+ypos+',left='+xpos);		
+	 }
+		 
+}
+function irApost()
+{
+    if(document.getElementById("ctl00_cphCuerpo_hidNumeroActuacionApostilla")!=null){
+          
+            numeroApostilla=document.getElementById("ctl00_cphCuerpo_hidNumeroActuacionApostilla").value;
+            height='450';
+            width='390';
+            url="FrmVistaApostilla.aspx?idTicketAct="+numeroApostilla;
+	        xpos=(window.screen.width/2)-(width/2);
+	        ypos=(window.screen.height/2)-(height/2);
+	        name=''
+        	 
+		 window.open(url, name, 'height=' + height + ',width=' + width + ',toolbar=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,modal=yes,top='+ypos+',left='+xpos);		
+		//res.focus();
+		 
+    }
+}
+ 
+function validate_paso1(){
+            if(document.getElementById("ctl00_cphCuerpo_ddlFirmante")!=null){
+                    if(document.getElementById("ctl00_cphCuerpo_ddlFirmante").selectedIndex==0){
+                            alert('Seleccione Autoridad Firmante.');
+                            return false;
+                    }
+            }
+            if(document.getElementById("ctl00_cphCuerpo_ddlTipoDocumento")!=null){
+                    if(document.getElementById("ctl00_cphCuerpo_ddlTipoDocumento").selectedIndex==0){
+                            alert('Seleccione tipo documento a Apostillar.');
+                            return false;
+                    }
+            }
+            if(document.getElementById("ctl00_cphCuerpo_txtOperacion")!=null){
+                    if(document.getElementById("ctl00_cphCuerpo_txtOperacion").value==""){
+                            alert('Ingrese Número de Operacion Bancaria.');
+                            return false;
+                    }
+            }
+             if(document.getElementById("ctl00_cphCuerpo_txtNumeroTicket")!=null){
+                    if(document.getElementById("ctl00_cphCuerpo_txtNumeroTicket").value==""){
+                            alert('Ingrese Número de Ticket.');
+                            return false;
+                    }
+            }
+            
+ 
+}
+function solonumerosypunto(e)
+{
+	var target = (e.target ? e.target : e.srcElement);
+	var key = (e ? e.keyCode || e.which : window.event.keyCode);
+	if (key == 46) return (target.value.length > 0 && target.value.indexOf(".") == -1);
+	return (key <= 12 || (key >= 48 && key <= 57));
+}
+
+ </script>

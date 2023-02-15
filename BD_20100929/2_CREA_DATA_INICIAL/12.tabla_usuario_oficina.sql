@@ -1,0 +1,1 @@
+INSERT SAET_USUARIO_OFICINA(usof_icodigo_usuario_oficina,usua_icodigo_usuario,ofic_icodigo_oficina,usof_situacion) VALUES('1','1','125','A')

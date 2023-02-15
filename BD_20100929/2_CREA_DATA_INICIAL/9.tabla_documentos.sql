@@ -1,0 +1,1 @@
+INSERT SAET_DOCUMENTO(docu_icodigo_documento,docu_icodigo_tipo_documento,docu_vnumero_documento,pers_icodigo_persona) VALUES('1','9','88888888','1')

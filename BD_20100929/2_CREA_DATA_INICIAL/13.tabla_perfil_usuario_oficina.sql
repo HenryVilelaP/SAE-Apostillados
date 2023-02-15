@@ -1,0 +1,1 @@
+INSERT SAET_PERFIL_USUARIO_OFICINA(peuo_codigo_perfil_usuario,usof_icodigo_usuario_oficina,perf_icodigo_perfil,peuo_csituacion) VALUES('1','1','0','A')

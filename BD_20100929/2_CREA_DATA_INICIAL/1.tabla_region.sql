@@ -1,0 +1,7 @@
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('1','América del Sur','A','1')
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('2','América del Norte','A','2')
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('3','Europa','A','3')
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('4','Africa','A','4')
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('5','América Central','A','5')
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('6','Asia','A','6')
+INSERT SAET_REGION(regi_icodigo_region,regi_vnombre_region,regi_cestado,regi_vcodigo_region) VALUES('7','Oceania','A','7')

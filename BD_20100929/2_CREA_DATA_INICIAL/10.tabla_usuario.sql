@@ -1,0 +1,1 @@
+INSERT SAET_USUARIO(usua_icodigo_usuario,usua_vusuario_red_usuario,usua_vdominio_usuario,usua_vcorreo_usuario,usua_icodigo_perfil_usuario_crea,usua_sfecha_crea,usua_icodigo_perfil_usuario_modifica,usua_sfecha_modifica,usua_cestado_usuario) VALUES('1','dbalviss','MRENT','dbalviss@rree.gob.pe',NULL,NULL,'5','Sep 29 2010 10:45AM','A')

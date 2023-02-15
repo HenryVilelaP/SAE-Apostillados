@@ -1,0 +1,2 @@
+actualiza los datos del campo serie y numero de serie, que no tengan letras
+sólo numeros

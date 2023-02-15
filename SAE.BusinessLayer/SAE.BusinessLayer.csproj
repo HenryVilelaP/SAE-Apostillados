@@ -1,0 +1,94 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F46D0555-8B2A-475F-B509-442D68854742}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAE.BusinessLayer</RootNamespace>
+    <AssemblyName>SAE.BusinessLayer</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BApostillador.cs" />
+    <Compile Include="BModulo.cs" />
+    <Compile Include="BOficina.cs" />
+    <Compile Include="BOpcion.cs" />
+    <Compile Include="BPais.cs" />
+    <Compile Include="BParametro.cs" />
+    <Compile Include="BPerfil.cs" />
+    <Compile Include="BPerfilUsuario.cs" />
+    <Compile Include="BPersona.cs" />
+    <Compile Include="BUnidad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUsuario.cs" />
+    <Compile Include="BFirmante.cs" />
+    <Compile Include="BActuacion.cs" />
+    <Compile Include="BStickerApostillador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SAE.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SAE.DataLayer\SAE.DataLayer.csproj">
+      <Project>{66D4EE80-6D21-45CD-B36E-845B99575D08}</Project>
+      <Name>SAE.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAE.EntityLayer\SAE.EntityLayer.csproj">
+      <Project>{18F34672-1713-4308-A6DF-AF8C4644B8A6}</Project>
+      <Name>SAE.EntityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAE.Nullables\SAE.Nullables.csproj">
+      <Project>{8785958B-14A7-4495-9585-612E77B0A7C5}</Project>
+      <Name>SAE.Nullables</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

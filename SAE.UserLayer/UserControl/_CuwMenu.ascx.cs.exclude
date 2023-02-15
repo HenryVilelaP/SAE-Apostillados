@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+
+
+using SAE.BusinessLayer;
+using SAE.UInterfaces;
+using SAE.EntityLayer;
+using SAE.Nullables;
+
+
+
+public partial class CuwMenu : System.Web.UI.UserControl
+{
+
+    #region  Propiedades y Constantes
+    
+    MenuItem varmenu = null; 
+    MenuItem mhijo = null;
+    private const string K_RUTA_DEFAULT = "RutaDefault";
+    private const string K_SESION_ID_PERFIL = "_IdPerfilActual";
+    private const string K_SESSION_ID_PERFIL_USUARIO_OFICINA = "_IDPerfilUsuarioOficina";
+
+    #endregion
+
+     
+    public void cargarMenu(   Int32 pintPerfil)
+    {
+        mnuPrincipal.Items.Clear();
+        NullInt32 intPerfilUsuOfic = NullInt32.Empty ;
+
+            
+            BUsuario objUsuario = new BUsuario();
+            objUsuario.Constructor(new UIPage().Conexion);
+            DataTable dtMOdulos = objUsuario.ListarModulosXPerfiles(pintPerfil);
+
+            List<EModulo> objModuloColecction = new List<EModulo>();
+            foreach (DataRow fila in dtMOdulos.Rows)
+            {
+                EModulo objEmodul = new EModulo();
+                objEmodul.CodigoModuloPadre = NullInt32.Create(Convert.ToString(fila["CODIGOPADRE"]));
+                objEmodul.CodigoModulo = NullInt32.Create(Convert.ToString(fila["CODIGOMODULO"]));
+                objEmodul.Ruta = NullString.Create(Convert.ToString(fila["RUTA"]));
+                objEmodul.Nombre = NullString.Create(Convert.ToString(fila["TITULOMODULO"]));
+                objEmodul.Icono = NullString.Create(Convert.ToString(fila["ICONO"]));
+                objModuloColecction.Add(objEmodul);
+                objEmodul = null;
+            }
+
+
+            foreach (EModulo _objOpcion in objModuloColecction)
+            {
+                if (_objOpcion.CodigoModuloPadre.Value == 0)
+                {
+                    varmenu = new MenuItem();
+                    varmenu.Text = _objOpcion.Nombre.UINullable;
+                    varmenu.Value = _objOpcion.CodigoModulo.UINullable;
+                    varmenu.NavigateUrl = _objOpcion.Ruta.UINullable;
+                    
+                    mnuPrincipal.Items.Add(varmenu);
+                    if (!cargarMenuHijo(objModuloColecction)) mnuPrincipal.Items.Remove(varmenu);
+                }
+            }
+           
+  
+    }
+
+
+ 
+
+
+     protected bool cargarMenuHijo(List<EModulo> objOpcions)
+     {
+         Int32 num_hijos_econtrados = 0;
+         foreach (EModulo objOpcion in objOpcions)
+         {
+             if (varmenu.Value == objOpcion.CodigoModuloPadre.UINullable)
+             {      
+                 //if (objOpcion.TipoAcceso.UINullable != SAE.UInterfaces.UIConstantes.TIPO_ACCESO_OPCION.NONE)
+                 //{
+                     mhijo = new MenuItem();
+                     mhijo.Text = "&nbsp;&nbsp;" + objOpcion.Nombre.UINullable;
+                     mhijo.Value = objOpcion.CodigoModulo.UINullable;
+                     mhijo.NavigateUrl = Request.ApplicationPath + objOpcion.Ruta.UINullable;
+                     mhijo.ImageUrl = "~/images/iconos/" + objOpcion.Icono.UINullable.Trim();
+               
+                     varmenu.ChildItems.Add(mhijo);
+                     num_hijos_econtrados++;
+                // }
+             }
+         }
+         if (num_hijos_econtrados == 0) return false;
+         else return true;
+
+     }
+    
+}

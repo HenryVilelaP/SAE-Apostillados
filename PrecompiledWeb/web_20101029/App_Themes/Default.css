@@ -1,0 +1,667 @@
+﻿body
+{
+	font-family: Trebuchet MS  ;
+	font-style:normal;
+	font-size:11px;
+	background-color:'whitesmoke';
+	font-variant:inherit;
+	scrollbar-face-color: #F6F6F6; 
+	scrollbar-highlight-color: #CCC; 
+	scrollbar-shadow-color: #F6F6F6; 
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-arrow-color:#000000; 
+	scrollbar-track-color:#E5E5E5; 
+	scrollbar-drakshadow-color:#000000;
+ 
+}
+.numero_apostilla
+{
+	
+  font-family  :Trebuchet MS;
+  font-style:normal;
+  font-size:20px;
+  font-weight:bold;
+  background-color:#E60003;
+  color:#FFFFFF;  
+  
+} 
+ .stl_serie
+     {
+     	font-size:12px;
+     	height:30px;
+     	font-weight:bold;
+     }
+.etiqueta
+{
+	
+  font-family  :Trebuchet MS;
+  font-style:normal;
+  font-size:12px;
+  font-weight:bold;
+  text-align:left;
+  
+} 
+.etiqueta_main
+{
+	
+  font-family  :Trebuchet MS;
+  font-style:normal;
+  font-size:12px;
+  font-weight:bold;
+  text-align:left;
+  text-transform:uppercase;
+  
+}
+.msg_error
+{
+    background-color:Red;
+    color : White ;    
+    font-weight:bold;
+    
+}
+.msg_ok
+{
+    color:white;
+    background-color:#98CA00;
+    
+}
+ 
+.validador
+{
+  font-family:Trebuchet MS;
+  font-style:normal;
+  font-size:10px; 
+   color:darkred;
+    
+}
+.cajaFiltros
+{
+     border-right : 1px solid  #CCCCCC; 
+     border-left : 1px solid  #CCCCCC; 
+     border-bottom : 1px solid  #CCCCCC; 
+     border-top : 1px solid  #CCCCCC; 
+    
+     background-image:url("../Images/Principal/bg_caja_filtro.gif");  
+}
+.bg_fondo_tabla
+ {
+     background  :#F6F6F6;/* :#C7D0CF;
+     background-image:url("../Images/Principal/bg2.gif");  */
+     
+ }
+ .Modulo_Actual
+ {
+   font-size:14px;
+   text-align:center;  
+   color:Black;  
+   color:    #1F3363;
+ }
+ .espacio_titulo_barra
+ {
+     height:15px;
+ }
+.titulo
+{
+   
+   font-size:18px;
+   text-align:center;
+    font-weight:bold;
+   
+}
+.cabeceraSubTitulo
+{
+      background-image:url("../Images/Principal/bg.gif");    
+      font-size:16px;
+      text-align:center;
+}
+.subTitulo
+{
+   
+   font-size:16px;
+   text-align:center;
+}
+.sub-sub-titulo
+{
+   
+   font-size:13px;
+   
+}
+.CajaDialogoGeneral
+{
+    background-color:#FFFFFF;
+    background-image:url("../Images/Principal/bg2.gif");  
+    border-width: 4px;
+    border-style: outset;
+    padding: 0px;
+    font-weight: bold;
+    
+}
+.CajaDialogoConfirmacion
+{
+    background-color:#FFFFFF;
+    background-image:url("../Images/Principal/bg2.gif");  
+    border-width: 4px;
+    border-style: outset;
+    padding: 0px;
+    width: 400px;
+    font-weight: bold;
+    
+}
+.CajaDialogo
+{
+    background-color: #ffffff;
+    border-width: 4px;
+    border-style: outset;
+    padding: 0px;
+    width: 300px;
+    font-weight: bold;
+    font-style: italic;
+}
+.CajaDialogo div
+{
+    margin: 5px;
+    text-align: left;
+}
+
+.BackgroundPopup
+{
+    background-color:gray;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+} 
+
+.close {	
+    DISPLAY: block;	
+    BACKGROUND: url("../Images/Iconos/close24.png") no-repeat 0px 0px;	
+    LEFT: -5px;	
+    WIDTH: 26px;	
+    TEXT-INDENT: -1000em;	
+    POSITION: absolute;	
+    TOP: -7px;	
+    HEIGHT: 26px;	
+}   
+  
+.FondoAplicacion
+{
+    background-color:gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.body-left
+{
+  background-image:url("../Images/Principal/bg2.gif");   
+      
+}
+#apDivProgresoLogin {
+    position:absolute;
+    z-index:1;
+    left: 0px;
+    top: 0px;
+    background-color:#E60003;
+    color:#FFFFFF;    
+    font-size:12px;
+    font-weight:bold;
+     
+    
+}
+
+#apDivProgreso {
+    position:absolute;
+    z-index:1;
+   left: 0px;
+    top: 0px;
+    background-color:#E60003;
+    color:#FFFFFF; 
+    font-size:12px;
+    font-weight:bold;
+     
+    
+}
+#apDivProgresoGeneral {
+    
+    z-index:100;
+    top:50%;
+    left: 50%;
+
+}
+.DivGrillaBorde
+{
+     border-right : 1px solid  #CCCCCC; 
+     border-left : 1px solid  #CCCCCC; 
+     border-bottom : 1px solid  #CCCCCC; 
+ 
+}
+
+ 
+.DivGrilla
+{
+     overflow:auto; 
+     height:250px;
+     
+}
+.DivGrillaDimension
+{
+     overflow:auto; 
+     height:250px;
+     /*width:100%; */
+}
+.DivGrillaDimensionPopup
+{
+     border-right : 1px solid  #CCCCCC; 
+     border-left : 1px solid  #CCCCCC; 
+     overflow:auto; 
+     height:250px;
+     width:100%; 
+}
+.td-left
+{
+border-left : 1px solid  #A52539;  
+}
+.td-right
+{
+border-right : 1px solid  #A52539; 
+}
+.td-bottom
+{
+border-bottom : 1px solid  #A52539; 
+}
+.td-top
+{
+border-top : 1px solid  #A52539; 
+}
+#lblTitulo
+{
+  font-size:20px;
+  font-weight:bold;   
+}
+#table-border_login
+{
+    border: 1px solid gray;
+    height: 116px;
+    background-color:whitesmoke;
+}
+.table-border
+{
+border: 1px solid #A52539;
+    height: 116px;
+    width: 548px;
+}
+
+#fondo-td-master
+{
+  background-color:#82373E;
+  
+   
+}
+#bar-nav
+{
+	 background-color: #F6F6F6;
+    background-image:url("../Images/Principal/bg3.gif");
+    vertical-align:bottom;
+        
+}
+#footer
+{
+     background-image:url("../Images/Principal/bg.gif");
+}
+
+#header-master
+{
+   background-color: #F6F6F6; 
+   background-image:url("../Images/Principal/bg.gif");/*
+  background-image:url("../Images/Logos/fondo_logo_superior.jpg");
+   background-position:right;
+   background-repeat:no-repeat;*/
+   height:70px;
+  
+  
+   
+ 
+   
+}
+
+/*MAIN*/
+
+.box { float: center; width: 100%;  }
+#boxContent { border: none; background:#FFFFFF; }
+#boxContent { position: relative; left: -5px; top: -5px; }
+#boxContainer 
+{
+     position: relative;
+     background: black;/*#82373E;*/
+     margin: 10px;
+                    
+                     
+     }
+#tabla-principal
+{
+        background:#FFFFFF;
+        border-left : 1px solid  gray;  
+        border-right : 1px solid  gray; 
+        border-top : 1px solid  gray; 
+        border-bottom : 1px solid  gray; 
+     
+}
+
+.td-left-main
+{
+border-left : 1px solid  gray;  
+}
+.td-right-main
+{
+border-right : 1px solid  gray; 
+}
+.td-bottom-main
+{
+border-bottom : 1px solid  gray; 
+}
+.td-top-main
+{
+border-top : 1px solid  gray; 
+}
+ 
+.td-left-apostilla
+{
+border-left : 1px solid  gray;  
+}
+.td-right-apostilla
+{
+border-right : 1px solid  gray; 
+}
+.td-bottom-apostilla
+{
+border-bottom : 1px solid  gray; 
+}
+.td-top-apostilla
+{
+border-top : 1px solid  gray; 
+}
+
+
+/*FIN MAIN*/
+.validatorCalloutHighlight 
+{
+    background-color: lemonchiffon; 
+}
+.RowSelected
+{
+  background-color:  #BCABA3;  
+}
+.RowUnselected
+{
+     background-color:  white;  
+}
+/*CONTROLES HTML*/
+.textbox
+{
+  font-style:normal;
+  font-size:10px; 
+  border  : 1px solid  gray; 
+  color:black;
+}
+input
+{
+  font-family:Trebuchet MS;
+  font-style:normal;
+  font-size:11px; 
+  border  : 1px solid  gray; 
+}
+select
+{                             
+  font-family:Trebuchet MS;
+  font-style:normal;
+  font-size:11px; 
+  border  : 1px solid  gray;
+  height : 20px;
+}
+/*END CONTROLES*/
+
+/*Estilo control calendario*/
+.cal_Theme1 .ajax__calendar_container 
+{ 
+background-color: #e2e2e2; border:solid 1px #cccccc; 
+} 
+.cal_Theme1 .ajax__calendar_header 
+{ 
+background-color: #ffffff; margin-bottom: 4px; 
+} 
+.cal_Theme1 .ajax__calendar_title, 
+.cal_Theme1 .ajax__calendar_next, 
+.cal_Theme1 .ajax__calendar_prev 
+{ 
+color: #004080; padding-top: 3px; 
+} 
+.cal_Theme1 .ajax__calendar_body 
+{ 
+background-color: #e9e9e9; border: solid 1px #cccccc; 
+} 
+.cal_Theme1 .ajax__calendar_dayname 
+{ 
+text-align:center; font-weight:bold; margin-bottom: 4px; margin-top: 2px; 
+} 
+.cal_Theme1 .ajax__calendar_day 
+{ 
+text-align:center; 
+} 
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day, 
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month, 
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year, 
+.cal_Theme1 .ajax__calendar_active 
+{ 
+color: #004080; font-weight:bold; background-color: #ffffff; 
+} 
+.cal_Theme1 .ajax__calendar_today 
+{ 
+font-weight:bold; 
+} 
+.cal_Theme1 .ajax__calendar_other, 
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today, 
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title 
+{ 
+color: #bbbbbb; 
+} 
+/*FIN Estilo control calendario*/
+
+
+/*ESTILOS GRILLA*/
+
+GridViewStyle
+{    
+    border-right: 2px solid #A7A6AA;
+    border-bottom: 2px solid #A7A6AA;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    padding: 4px;
+ 
+}
+
+.GridViewStyle a
+{
+    color: #FFFFFF;
+}
+
+.GridViewHeaderStyle th
+{
+    border-left: 1px solid #EBE9ED;
+    border-right: 1px solid #EBE9ED;
+}
+
+.GridViewHeaderStyle
+{
+    background-color: #5D7B9D;
+    font-weight: bold;
+    color: White;
+}
+
+.GridViewFooterStyle
+{
+    background-color: #5D7B9D;
+    font-weight: bold;
+    color: White;
+}
+
+.GridViewRowStyle
+{
+    background-color:white;
+    color: #333333;
+      
+
+}
+
+.GridViewAlternatingRowStyle 
+{
+    background-color:whitesmoke;
+    color: #333333;
+    
+ 
+ }
+  /*
+.GridViewRowStyle td, .GridViewAlternatingRowStyle td
+{
+    border: 1px solid #EBE9ED;
+}
+*/
+.GridViewSelectedRowStyle
+{
+    background-color: #E2DED6;
+    font-weight: bold;
+    color: #333333;
+}
+
+.GridViewPagerStyle
+{
+    background-color: #284775;
+    color: #FFFFFF;
+}
+
+.GridViewPagerStyle table /* to center the paging links*/
+{
+    margin: 0 auto 0 auto;
+}
+  .header-gridview
+{
+      background-color: #DEE2EA;     
+      background-image:url("../Images/Principal/bg.gif"); 
+      border-right-color:#ad9e87;
+	  border-bottom-color:#ad9e87;
+	  font-weight:bold;
+	  
+
+}
+/*FIN DE ESTUILOS GRILLA*/
+
+
+/* estilo enlace */
+.enlaceboton   
+{
+   font-size: 11px; 
+   padding: 4px; 
+   text-decoration: none; 
+   color:    #1F3363;
+  
+   
+
+} 
+.enlaceboton:link, 
+.enlaceboton:visited { 
+ 
+} 
+.enlaceboton:hover { 
+      
+    background-color:#E60003;
+    color:#FFFFFF;  
+    height:60px;
+    font-weight:bold;
+    white-space:nowrap;
+   
+	 
+
+
+} 
+
+.cajaarriba{ 
+ width:600px;
+background-image: url("../Images/Principal/arriba.gif"); 
+background-position: top center; 
+background-repeat: no-repeat; 
+background   : #C7D0CF;
+ 
+} 
+.cajaabajo { 
+background-image: url("../Images/Principal/abajo.gif"); 
+background-position: bottom left; 
+background-repeat: no-repeat; 
+padding: 5px 5px 5px 5px; 
+} 
+/*fin estilo enlace */
+
+
+/*ESTILO PARA MENU PRINCIPAL*/
+
+.level1
+{
+		  height:30px;
+          background-color: #F6F6F6;
+          padding-top:2px;
+          padding-right:3px;
+          padding-bottom:2px;
+          padding-left:20px; 
+          color: black;
+           
+          font-size:12px;
+          border-right: 0px solid  red;
+          border-bottom: 1px solid #A7A6AA;
+          border-left: 0px solid white;
+          border-top: 0px solid white;
+           background-image:url("../Images/Principal/bg3.gif");
+          
+}
+
+.level2
+{
+
+          background-color: #F6F6F6;
+          padding-top:2px;
+          padding-right:3px;
+          padding-bottom:2px;
+          padding-left:2px; 
+          color: black;
+          font-size:12px;
+          font-style:bold; 
+          border-right: 0px solid #A7A6AA;
+          border-bottom: 1px solid #A7A6AA;
+          border-left: 0px solid white;
+          border-top: 0px solid white;
+          text-transform:uppercase;
+          font-variant: small-caps;
+          
+}
+
+.level3
+{
+     background: #EEEEEE; padding-top:2px;padding-right:3px;padding-bottom:2px;padding-left:20px; 
+    
+
+}
+
+.hoverstyle
+{
+    
+/*    background-image:url("../Images/Principal/bg3.gif");*/
+}
+       
+.sublevel1
+{
+    background-color: Gray !important;
+    color: White !important;
+    font-variant: small-caps;
+}  
+/*FIN ESTILO MENU PRINCIPAL*/
+
+.stl_descripcion_dato_ajax
+{
+	color:red;
+}
